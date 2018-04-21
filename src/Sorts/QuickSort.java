@@ -1,9 +1,9 @@
-package sort;
+package Sorts;
 
 import java.util.Arrays;
 
 /**
- * Created by weicools on 2018/03/2018/3/12.
+ * Created by weicools on 2018/3/12.
  * <p>
  * desc: 快速排序
  */
@@ -15,6 +15,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] num = {3, 2, 6, 8, 4, 5, 9};
+        System.out.println("------QuickSort------");
         System.out.println(Arrays.toString(num));
         quick(num);
     }
@@ -23,34 +24,35 @@ public class QuickSort {
     /**
      * 快速排序
      *
-     * @param num 待排序数组
+     * @param numArray 待排序数组
      */
-    private static void quick(int[] num) {
+    private static void quick(int[] numArray) {
         //查看数组是否为空
-        if (num.length > 0) {
-            quickSort(num, 0, num.length - 1);
+        if (numArray.length > 0) {
+            quickSort(numArray, 0, numArray.length - 1);
         }
 
-        System.out.println(Arrays.toString(num));
+        System.out.println("---------------------");
+        System.out.println(Arrays.toString(numArray));
     }
 
 
     /**
      * 递归形式的分治排序算法
      *
-     * @param num  待排序数组
-     * @param low  开始位置
-     * @param high 结束位置
+     * @param numArray 待排序数组
+     * @param low      开始位置
+     * @param high     结束位置
      */
-    private static void quickSort(int[] num, int low, int high) {
+    private static void quickSort(int[] numArray, int low, int high) {
         if (low < high) {
             //将numbers数组进行一分为二
-            int middle = getMiddle(num, low, high);
+            int middle = getMiddle(numArray, low, high);
 
             //对低字段表进行递归排序
-            quickSort(num, low, middle - 1);
+            quickSort(numArray, low, middle - 1);
             //对高字段表进行递归排序
-            quickSort(num, middle + 1, high);
+            quickSort(numArray, middle + 1, high);
         }
     }
 
@@ -58,26 +60,26 @@ public class QuickSort {
     /**
      * 查找出中轴（默认是最低位low）的在numbers数组排序后所在位置
      *
-     * @param num  待查找数组
-     * @param low  开始位置
-     * @param high 结束位置
+     * @param numArray 待查找数组
+     * @param low      开始位置
+     * @param high     结束位置
      * @return 中轴所在位置
      */
-    private static int getMiddle(int[] num, int low, int high) {
-        int temp = num[low];
+    private static int getMiddle(int[] numArray, int low, int high) {
+        int temp = numArray[low];
         while (low < high) {
-            while (low < high && num[high] >= temp) {
+            while (low < high && numArray[high] >= temp) {
                 high--;
             }
-            num[low] = num[high];
+            numArray[low] = numArray[high];
 
-            while (low < high && num[low] < temp) {
+            while (low < high && numArray[low] < temp) {
                 low++;
             }
-            num[high] = num[low];
+            numArray[high] = numArray[low];
         }
 
-        num[low] = temp;
+        numArray[low] = temp;
         return low;
     }
 }
