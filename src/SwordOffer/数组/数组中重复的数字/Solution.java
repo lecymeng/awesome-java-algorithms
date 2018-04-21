@@ -34,7 +34,7 @@ public class Solution {
         }
 
         for (int i = 0; i < length; i++) {
-            if (nums[i] != i && nums[i] != nums[nums[i]]) {
+            while (nums[i] != i && nums[i] != nums[nums[i]]) {
                 swap(nums, i, nums[i]);
             }
 
@@ -60,6 +60,6 @@ public class Solution {
         Solution solution = new Solution();
         solution.duplicate(nums, 7, dup);
 
-        System.out.printf("" + dup[0]);
+        System.out.println("" + dup[0]);
     }
 }
