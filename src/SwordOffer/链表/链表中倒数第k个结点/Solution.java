@@ -1,4 +1,4 @@
-package SwordOffer.代码的鲁棒性.链表中倒数第k个结点;
+package SwordOffer.链表.链表中倒数第k个结点;
 
 /**
  * Created by Weicools on 2018/4/22.
