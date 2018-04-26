@@ -38,18 +38,18 @@ public class Solution {
     因此只需要存储前两项的值就能求解第 i 项，从而将空间复杂度由 O(N) 降低为 O(1)
     */
     public int fibonacci2(int n) {
-        if (n <=1) {
+        if (n <= 1) {
             return n;
         }
 
         int result = 0;
         int pre1 = 0, pre2 = 1;
         for (int i = 2; i <= n; i++) {
-            result = pre1+pre2;
+            result = pre1 + pre2;
             pre1 = pre2;
             pre2 = result;
         }
-        
+
         return result;
     }
 
@@ -59,13 +59,15 @@ public class Solution {
     之后就能以 O(1) 时间复杂度得到第 n 项的值了
     */
     private int[] mFib = new int[40];
+
     public Solution() {
         mFib[0] = 0;//可忽略，默认初始化为0
         mFib[1] = 1;
-        for(int i = 2; i < mFib.length; i++) {
+        for (int i = 2; i < mFib.length; i++) {
             mFib[i] = mFib[i - 1] + mFib[i - 2];
         }
     }
+
     public int fibonacci(int n) {
         return mFib[n];
     }
