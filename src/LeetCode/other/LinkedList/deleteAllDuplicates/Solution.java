@@ -1,4 +1,4 @@
-package LeetCode.LinkedList.deleteAllDuplicates;
+package LeetCode.other.LinkedList.deleteAllDuplicates;
 
 /**
  * Created by Weicools on 2018/4/26.

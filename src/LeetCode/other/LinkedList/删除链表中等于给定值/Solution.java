@@ -1,4 +1,4 @@
-package LeetCode.LinkedList.删除链表中等于给定值;
+package LeetCode.other.LinkedList.删除链表中等于给定值;
 
 /**
  * Created by Weicools on 2018/4/26.

@@ -1,4 +1,4 @@
-package LeetCode.String.ValidParentheses;
+package LeetCode.other.String.ValidParentheses;
 
 /**
  * Created by Weicools on 2018/4/26.

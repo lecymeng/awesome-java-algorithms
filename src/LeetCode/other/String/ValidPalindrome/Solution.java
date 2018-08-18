@@ -1,4 +1,4 @@
-package LeetCode.String.ValidPalindrome;
+package LeetCode.other.String.ValidPalindrome;
 
 /**
  * Created by Weicools on 2018/4/26.

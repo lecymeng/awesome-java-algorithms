@@ -1,4 +1,4 @@
-package LeetCode.String.LengthOfLastWord;
+package LeetCode.other.String.LengthOfLastWord;
 
 /**
  * Created by Weicools on 2018/4/26.

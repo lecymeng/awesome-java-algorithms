@@ -1,4 +1,4 @@
-package LeetCode.String.StringIPAddress;
+package LeetCode.other.String.StringIPAddress;
 
 import java.util.ArrayList;
 import java.util.List;
