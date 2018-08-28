@@ -45,6 +45,23 @@ public class Solution {
     return null;
   }
 
+  public int[] twoSumAnswer (int[] num, int target) {
+    int i = 0;
+    int j = num.length - 1;
+    while (i < j) {
+      int sum = num[i] + num[j];
+      if (sum == target) {
+        return new int[] { i + 1, j + 1 };
+      } else if (sum < target) {
+        i++;
+      } else {
+        j--;
+      }
+    }
+
+    return null;
+  }
+
   public static void main (String[] args) {
     Solution solution = new Solution();
     int[] num = { 2, 7, 11, 15 };
