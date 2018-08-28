@@ -1,4 +1,4 @@
-package SwordOffer.链表.从尾到头打印链表;
+package SwordOffer.链表;
 
 /**
  * Created by Weicools on 2018/4/21.
@@ -6,8 +6,8 @@ package SwordOffer.链表.从尾到头打印链表;
  * desc: ListNode
  */
 public class ListNode {
-    int val;
-    ListNode next = null;
+    public int val;
+    public ListNode next = null;
 
     public ListNode(int val) {
         this.val = val;

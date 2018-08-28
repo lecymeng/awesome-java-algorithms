@@ -1,5 +1,7 @@
 package SwordOffer.链表.链表中倒数第k个结点;
 
+import SwordOffer.链表.ListNode;
+
 /**
  * Created by Weicools on 2018/4/22.
  * <p>

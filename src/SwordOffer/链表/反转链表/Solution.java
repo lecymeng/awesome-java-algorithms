@@ -1,5 +1,7 @@
 package SwordOffer.链表.反转链表;
 
+import SwordOffer.链表.ListNode;
+
 /**
  * Created by Weicools on 2018/4/26.
  * <p>
