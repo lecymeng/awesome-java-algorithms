@@ -5,49 +5,66 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Weicools on 2018/4/26.
- * <p>
+ * @author Weicools Create on 2018/4/26.
+ *
  * desc: 给定一个整数数组和一个目标值，找出数组中和为目标值的两个数
- * <p>
- * 给定 nums = [2, 7, 11, 15], target = 9
- * 因为 nums[0] + nums[1] = 2 + 7 = 9
+ *
+ * 给定 num = [2, 7, 11, 15], target = 9
+ * 因为 num[0] + num[1] = 2 + 7 = 9
  * 所以返回 [0, 1]
- * <p>
+ *
  * https://leetcode.com/problems/two-sum/solution/
  * https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/29/
  */
 public class Solution {
-    public int[] twoSum1(int[] nums, int target) {
-        int len = nums.length;
-        for (int i = 0; i < len; i++) {
-            for (int j = i + 1; j < len; j++) {
-                if ((nums[i] + nums[j]) == target) {
-                    return new int[]{i, j};
-                }
-            }
+  public int[] twoSum1 (int[] num, int target) {
+    int len = num.length;
+    for (int i = 0; i < len; i++) {
+      for (int j = i + 1; j < len; j++) {
+        if ((num[i] + num[j]) == target) {
+          return new int[] { i, j };
         }
-
-        return null;
+      }
     }
 
-    public int[] twoSum2(int[] nums, int target) {
-        int len = nums.length;
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < len; i++) {
-            int temp = target - nums[i];
-            if (map.containsKey(temp)) {
-                return new int[]{map.get(temp), i};
-            }
+    return null;
+  }
 
-            map.put(nums[i], i);
-        }
+  public int[] twoSum2 (int[] num, int target) {
+    int len = num.length;
+    Map<Integer, Integer> map = new HashMap<>();
+    for (int i = 0; i < len; i++) {
+      int temp = target - num[i];
+      if (map.containsKey(temp)) {
+        return new int[] { map.get(temp), i };
+      }
 
-        return null;
+      map.put(num[i], i);
     }
 
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        int[] nums = {2, 7, 11, 15};
-        System.out.println(Arrays.toString(solution.twoSum2(nums, 9)));
+    return null;
+  }
+
+  public int[] twoSumAnswer (int[] num, int target) {
+    int i = 0;
+    int j = num.length - 1;
+    while (i < j) {
+      int sum = num[i] + num[j];
+      if (sum == target) {
+        return new int[] { i + 1, j + 1 };
+      } else if (sum < target) {
+        i++;
+      } else {
+        j--;
+      }
     }
+
+    return null;
+  }
+
+  public static void main (String[] args) {
+    Solution solution = new Solution();
+    int[] num = { 2, 7, 11, 15 };
+    System.out.println(Arrays.toString(solution.twoSum2(num, 9)));
+  }
 }
