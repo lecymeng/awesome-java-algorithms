@@ -24,6 +24,7 @@ package LeetCode.easy.math.lc009_palindrome_number;
  * 你能不将整数转为字符串来解决这个问题吗？
  *
  * desc: https://leetcode-cn.com/problems/palindrome-number/description/
+ * tag: math
  */
 public class Solution {
   /**

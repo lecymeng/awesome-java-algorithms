@@ -20,7 +20,7 @@ public class OrderSearch {
      * 二分查找
      *
      * @param searchValue 待查找的值
-     * @param numArray    数组
+     * @param numArray    array
      * @return 查找结果
      */
     private static int orderSearch(int searchValue, int[] numArray) {
