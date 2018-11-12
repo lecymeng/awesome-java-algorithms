@@ -21,19 +21,19 @@ import java.util.Arrays;
  * tag: 数组、双指针
  */
 class Solution {
+  /**
+   * 依次把大的元素插入到 nums1 的末尾，
+   * 确保 nums2 中的元素全部插入到 nums1 即可。
+   */
   public void merge (int[] nums1, int m, int[] nums2, int n) {
-    int index1 = m - 1, index2 = n - 1;
-    int indexMerge = m + n - 1;
-    while (index1 >= 0 || index2 >= 0) {
-      if (index1 < 0) {
-        nums1[indexMerge--] = nums2[index2--];
-      } else if (index2 < 0) {
-        nums1[indexMerge--] = nums1[index1--];
-      } else if (nums1[index1] > nums2[index2]) {
-        nums1[indexMerge--] = nums1[index1--];
-      } else {
-        nums1[indexMerge--] = nums2[index2--];
-      }
+    int pm = m - 1, pn = n - 1;
+    int pMerge = m + n - 1;
+    while (pm >= 0 && pn >= 0) {
+      nums1[pMerge--] = nums1[pm] > nums2[pn] ? nums1[pm--] : nums2[pn--];
+    }
+
+    while (pn >= 0) {
+      nums1[pMerge--] = nums2[pn--];
     }
   }
 
