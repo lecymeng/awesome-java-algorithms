@@ -21,4 +21,39 @@ package LeetCode.easy.string.lc028_implement_strstr;
  * desc: https://leetcode-cn.com/problems/implement-strstr/description/
  * tag: 双指针、字符串
  */
-class Solution {}
+class Solution {
+  /**
+   * 如果找不到则返回-1，当子串长度大于主串，直接返回-1
+   */
+  public int strStr (String haystack, String needle) {
+    if (needle.isEmpty()) {
+      return 0;
+    }
+
+    int haystackLen = haystack.length();
+    int needleLen = needle.length();
+    for (int i = 0; ; i++) {
+      if (i + needleLen > haystackLen) {
+        return -1;
+      }
+
+      for (int j = 0; ; j++) {
+        if (j == needleLen) {
+          return i;
+        }
+
+        if (haystack.charAt(i + j) != needle.charAt(j)) {
+          break;
+        }
+      }
+    }
+  }
+
+  public static void main (String[] args) {
+    Solution s = new Solution();
+    String haystack = "hello";
+    String needle = "ll";
+
+    System.out.println(s.strStr(haystack, needle));
+  }
+}
