@@ -1,16 +1,19 @@
-package LeetCode.other.String.StringIPAddress;
+package LeetCode.medium.string.lc093_restore_ip_addresses;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author Weicools Create on 2018/4/26.
+ * 93. 复原IP地址
+ * 给定一个只包含数字的字符串，复原它并返回所有可能的 IP 地址格式。
  *
- * desc: 给一个由数字组成的字符串。求出其可能恢复为的所有IP地址
- * Given `"25525511135"`
- * return `["255.255.11.135", "255.255.111.35"]`. (Order does not matter)
+ * 示例:
+ * 输入: "25525511135"
+ * 输出: ["255.255.11.135", "255.255.111.35"]
  *
- * 注意 ：中间IP位置不能以0开始，0.01.01.1非法，应该是0.0.101.1或者0.0.10.11
+ * desc: https://leetcode-cn.com/problems/restore-ip-addresses/description/
+ * tag: 字符串
  */
 public class Solution {
     /*

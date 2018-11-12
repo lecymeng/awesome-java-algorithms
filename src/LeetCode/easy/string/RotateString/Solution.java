@@ -1,4 +1,4 @@
-package LeetCode.other.String.RotateString;
+package LeetCode.easy.string.RotateString;
 
 /**
  * @author Weicools Create on 2018/4/26.
