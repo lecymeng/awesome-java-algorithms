@@ -19,21 +19,26 @@ import java.util.Arrays;
  * tag: 数组、双指针
  */
 public class Solution {
+  /**
+   * 判断长度小于等于 1 的话直接返回原长度即可，
+   * 否则的话遍历一遍数组，用一个 tail 变量指向尾部，
+   * 如果后面的元素和前面的元素不同，就让 tail 变量加一，
+   * 最后返回 tail 即可。
+   */
   private int removeDuplicates (int[] num) {
     int len = num.length;
     if (len == 0) {
       return 0;
     }
 
-    int temp = 0;
+    int temp = 1;
     for (int i = 1; i < len; i++) {
-      if (num[i] != num[temp]) {
-        temp++;
-        num[temp] = num[i];
+      if (num[i] != num[i-1]) {
+        num[temp++] = num[i];
       }
     }
 
-    return temp + 1;
+    return temp;
   }
 
   public static void main (String[] args) {
