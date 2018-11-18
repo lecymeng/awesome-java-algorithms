@@ -1,5 +1,7 @@
 package LeetCode.easy.linked.lc206_reverse_linked_list;
 
+import LeetCode.easy.linked.ListNode;
+
 /**
  * @author Weicools Create on 2018.08.28
  *
@@ -17,5 +19,26 @@ package LeetCode.easy.linked.lc206_reverse_linked_list;
  * tag: linked、双指针
  */
 class Solution {
+  public ListNode reverseList (ListNode head) {
+    if (head == null || head.next == null) {
+      return head;
+    }
 
+    ListNode p = reverseList(head.next);
+    head.next.next = head;
+    head.next = null;
+    return p;
+  }
+
+  public ListNode reverseList1(ListNode head) {
+    ListNode prev = null;
+    ListNode curr = head;
+    while (curr != null) {
+      ListNode nextTemp = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = nextTemp;
+    }
+    return prev;
+  }
 }
