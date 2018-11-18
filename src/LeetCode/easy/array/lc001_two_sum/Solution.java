@@ -14,12 +14,11 @@ import java.util.Map;
  * 因为 num[0] + num[1] = 2 + 7 = 9
  * 所以返回 [0, 1]
  *
- * https://leetcode.com/problems/two-sum/solution/
  * https://leetcode-cn.com/problems/two-sum/description/
- * https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/29/
  * tag: 数组、哈希表
  */
 public class Solution {
+  @Deprecated
   public int[] twoSum1 (int[] num, int target) {
     int len = num.length;
     for (int i = 0; i < len; i++) {
@@ -33,6 +32,7 @@ public class Solution {
     return null;
   }
 
+  @Deprecated
   public int[] twoSum2 (int[] num, int target) {
     int len = num.length;
     Map<Integer, Integer> map = new HashMap<>();
@@ -48,7 +48,7 @@ public class Solution {
     return null;
   }
 
-  public int[] twoSumAnswer (int[] num, int target) {
+  public int[] twoSum (int[] num, int target) {
     int i = 0;
     int j = num.length - 1;
     while (i < j) {
@@ -68,6 +68,8 @@ public class Solution {
   public static void main (String[] args) {
     Solution solution = new Solution();
     int[] num = { 2, 7, 11, 15 };
+    System.out.println(Arrays.toString(solution.twoSum(num, 9)));
+    System.out.println(Arrays.toString(solution.twoSum1(num, 9)));
     System.out.println(Arrays.toString(solution.twoSum2(num, 9)));
   }
 }

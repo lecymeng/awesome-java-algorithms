@@ -46,7 +46,7 @@ class Solution {
   @Deprecated
   public int climbStairsV0 (int n) {
     if (n > 2) {
-      return climbStairs(n - 2) + climbStairs(n - 1);
+      return climbStairsV0(n - 2) + climbStairsV0(n - 1);
     } else if (n == 2) {
       return 2;
     }
