@@ -1,13 +1,13 @@
-package swordoffer.链表.反转链表;
+package swordoffer;
 
-import swordoffer.链表.ListNode;
+import swordoffer.data.ListNode;
 
 /**
  * Created by Weicools on 2018/4/26.
  * <p>
  * desc:
  */
-public class Solution {
+public class SO14ReverseLinkedList {
     public ListNode reverseListNode(ListNode head) {
         // head看作是前一结点，head.next是当前结点，reHead是反转后新链表的头结点  
         if (head == null || head.next == null) {
@@ -28,7 +28,7 @@ public class Solution {
         node.next.next.next = new ListNode(3);
         node.next.next.next.next = new ListNode(5);
 
-        Solution solution = new Solution();
+        SO14ReverseLinkedList solution = new SO14ReverseLinkedList();
         ListNode newNode = solution.reverseListNode(node);
 
         while (newNode != null) {

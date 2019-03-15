@@ -1,6 +1,6 @@
-package swordoffer.链表.从尾到头打印链表;
+package swordoffer;
 
-import swordoffer.链表.ListNode;
+import swordoffer.data.ListNode;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Stack;
@@ -11,8 +11,10 @@ import java.util.Stack;
  * desc: 输入链表的第一个节点，从尾到头反过来打印出每个结点的值
  * 1-->2-->3
  * 3-->2-->1
+ *
+ * link: https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&tqId=11156&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking
  */
-public class Solution {
+public class SO03PrintLinkedListFromEnd {
 
     /**
      * 使用栈 printListFromTailToHead
@@ -88,7 +90,7 @@ public class Solution {
         listNode.next.next = new ListNode(3);
         listNode.next.next.next = new ListNode(5);
 
-        Solution solution = new Solution();
+        SO03PrintLinkedListFromEnd solution = new SO03PrintLinkedListFromEnd();
         System.out.println(solution.byStack(listNode).toString());
     }
 }

@@ -1,8 +1,9 @@
-package swordoffer.树.重建二叉树;
+package swordoffer;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import swordoffer.data.TreeNode;
 
 /**
  * Created by Weicools on 2018/4/22.
@@ -11,8 +12,10 @@ import java.util.Map;
  * 假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
  * preOrder = [3,9,20,15,7]
  * inOrder =  [9,3,15,20,7]
+ *
+ * link: https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tqId=11157&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking
  */
-public class Solution {
+public class SO04ReConstructBinaryTree {
     /*
     前序遍历的第一个值为根节点的值，使用这个值将中序遍历结果分成两部分，
     左部分为树的左子树中序遍历结果，右部分为树的右子树中序遍历的结果。
@@ -52,7 +55,7 @@ public class Solution {
         int[] preOrder = {3,9,20,15,7};
         int[] inOrder = {9,3,15,20,7};
 
-        Solution s = new Solution();
+        SO04ReConstructBinaryTree s = new SO04ReConstructBinaryTree();
         s.reConstructBinaryTree(preOrder, inOrder);
     }
 }

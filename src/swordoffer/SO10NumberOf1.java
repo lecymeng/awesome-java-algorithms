@@ -1,11 +1,13 @@
-package swordoffer.位运算.二进制中1的个数;
+package swordoffer;
 
 /**
  * Created by Weicools on 2018/4/22.
  * <p>
- * desc: 输入一个整数，输出该数二进制表示中 1 的个数。
+ * desc: 输入一个整数，输出该数二进制表示中 1 的个数。其中负数用补码表示
+ *
+ * link: https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8?tpId=13&tqId=11164&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking
  */
-public class Solution {
+public class SO10NumberOf1 {
     /*Integer.bitCount()*/
     public int numberOf1(int n) {
         return Integer.bitCount(n);
@@ -31,7 +33,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution s = new Solution();
+        SO10NumberOf1 s = new SO10NumberOf1();
         System.out.println(s.getNumberOf1(2));
         System.out.println(s.getNumberOf1(3));
         System.out.println(s.getNumberOf1(8));

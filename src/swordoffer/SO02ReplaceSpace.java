@@ -1,12 +1,14 @@
-package swordoffer.字符串.替换空格;
+package swordoffer;
 
 /**
  * Created by Weicools on 2018/4/21.
  * <p>
  * desc: 请实现一个函数，将一个字符串中的空格替换成“%20”。
  * 例如，当字符串为 We Are Happy. 则经过替换之后的字符串为 We%20Are%20Happy。
+ *
+ * link: https://www.nowcoder.com/practice/4060ac7e3e404ad1a894ef3e17650423?tpId=13&tqId=11155&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking
  */
-public class Solution {
+public class SO02ReplaceSpace {
     /*
     解题思路
     在字符串尾部填充任意字符，使得字符串的长度等于字符串替换之后的长度。
@@ -52,7 +54,7 @@ public class Solution {
     public static void main(String[] args) {
         String s = "We Are Happy";
 
-        Solution solution = new Solution();
+        SO02ReplaceSpace solution = new SO02ReplaceSpace();
         System.out.println("<" + s + ">");
         System.out.println("<" + solution.replaceString(new StringBuilder(s)) + ">");
     }

@@ -1,4 +1,4 @@
-package swordoffer.栈和队列.用两个栈实现队列;
+package swordoffer;
 
 import java.util.Stack;
 
@@ -7,8 +7,10 @@ import java.util.Stack;
  * <p>
  * desc: 用两个栈来实现一个队列，完成队列的Push和Pop操作
  * 队列中的元素为int类型
+ *
+ * link: https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6?tpId=13&tqId=11158&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking
  */
-public class Solution {
+public class SO05ImplQueueByTwoStack {
     private Stack<Integer> in = new Stack<>();
     private Stack<Integer> out = new Stack<>();
 
@@ -31,7 +33,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution s = new Solution();
+        SO05ImplQueueByTwoStack s = new SO05ImplQueueByTwoStack();
         s.push(1);
         s.push(2);
         s.push(3);

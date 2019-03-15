@@ -1,13 +1,13 @@
-package swordoffer.链表.链表中倒数第k个结点;
+package swordoffer;
 
-import swordoffer.链表.ListNode;
+import swordoffer.data.ListNode;
 
 /**
  * Created by Weicools on 2018/4/22.
  * <p>
  * desc: 输入一个链表，输出该链表中倒数第k个结点。
  */
-public class Solution {
+public class SO13FindReciprocalKNode {
     /*
     设链表的长度为 N。设两个指针 P1 和 P2，
     先让 P1 移动 K 个节点，则还有 N - K 个节点可以移动。

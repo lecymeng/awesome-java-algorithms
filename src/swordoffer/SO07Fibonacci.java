@@ -1,4 +1,4 @@
-package swordoffer.动态规划.斐波那契数列;
+package swordoffer;
 
 /**
  * Created by Weicools on 2018/4/21.
@@ -8,8 +8,10 @@ package swordoffer.动态规划.斐波那契数列;
  * <p>
  * 斐波那契数列: 0、1、1、2、3、5、8、13、21...
  * 递归的方法定义：F(0)=0，F(1)=1, F(n)=F(n-1)+F(n-2)（n>2，n∈N*）
+ *
+ * link: https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tqId=11160&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking
  */
-public class Solution {
+public class SO07Fibonacci {
     /*
     解题思路
     如果使用递归求解，会重复计算一些子问题。
@@ -60,7 +62,7 @@ public class Solution {
     */
     private int[] mFib = new int[40];
 
-    public Solution() {
+    public SO07Fibonacci () {
         mFib[0] = 0;//可忽略，默认初始化为0
         mFib[1] = 1;
         for (int i = 2; i < mFib.length; i++) {
@@ -74,7 +76,7 @@ public class Solution {
     /*----------------------------------------*/
 
     public static void main(String[] args) {
-        Solution s = new Solution();
+        SO07Fibonacci s = new SO07Fibonacci();
         System.out.println("第5项：" + s.fibonacci2(5));
         System.out.println("第10项：" + s.fibonacci2(10));
         System.out.println("第20项：" + s.fibonacci2(20));

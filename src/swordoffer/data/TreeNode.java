@@ -1,4 +1,4 @@
-package swordoffer.树.重建二叉树;
+package swordoffer.data;
 
 /**
  * Created by Weicools on 2018/4/22.
@@ -6,9 +6,9 @@ package swordoffer.树.重建二叉树;
  * desc:
  */
 public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 
     public TreeNode(int val) {
         this.val = val;

@@ -1,4 +1,4 @@
-package swordoffer.链表;
+package swordoffer.data;
 
 /**
  * Created by Weicools on 2018/4/21.

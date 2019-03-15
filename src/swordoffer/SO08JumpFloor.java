@@ -1,12 +1,14 @@
-package swordoffer.递归和循环.跳台阶;
+package swordoffer;
 
 /**
  * Created by Weicools on 2018/4/21.
  * <p>
  * desc: 一只青蛙一次可以跳上 1级台阶，也可以跳上 2级
- * 求该青蛙跳上一个 n级的台阶总共有多少种跳法
+ * 求该青蛙跳上一个 n级的台阶总共有多少种跳法（先后次序不同算不同的结果）
+ *
+ * link: https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4?tpId=13&tqId=11161&tPage=1&rp=1&ru=%2Fta%2Fcoding-interviews&qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking
  */
-public class Solution {
+public class SO08JumpFloor {
     /**
      * 复杂度：O(N) + O(N)
      */
@@ -46,7 +48,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution s = new Solution();
+        SO08JumpFloor s = new SO08JumpFloor();
         System.out.println(s.jumpFloor1(5));
         System.out.println(s.jumpFloor2(5));
     }

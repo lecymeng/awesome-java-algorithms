@@ -1,4 +1,4 @@
-package swordoffer.数组.数组中重复的数字;
+package swordoffer;
 
 /**
  * Created by Weicools on 2018/4/21.
@@ -9,7 +9,7 @@ package swordoffer.数组.数组中重复的数字;
  * <p>
  * 要求复杂度为 O(N) + O(1)，时间复杂度 O(N)，空间复杂度 O(1)。因此不能使用排序的方法，也不能使用额外的标记数组。
  */
-public class Solution {
+public class SO50DuplicateNumberInArray {
     /*
     解题思路：
     这种数组元素在 [0, n-1] 范围内的问题，可以将值为 i 的元素放到第 i 个位置上
@@ -57,7 +57,7 @@ public class Solution {
         int[] nums = {2, 3, 1, 0, 2, 5, 3};
         int[] dup = new int[10];
 
-        Solution solution = new Solution();
+        SO50DuplicateNumberInArray solution = new SO50DuplicateNumberInArray();
         solution.duplicate(nums, 7, dup);
 
         System.out.println("" + dup[0]);
