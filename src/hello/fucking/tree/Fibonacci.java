@@ -1,5 +1,8 @@
-package hello.algorithms.fucking.tree;
+package hello.fucking.tree;
 
+/**
+ * @author weicools
+ */
 public class Fibonacci {
     public static void main(String[] args) {
         Fibonacci fibonacci = new Fibonacci();
