@@ -33,27 +33,33 @@
 // Related Topics 树 深度优先搜索 递归 
 // 👍 1079 👎 0
 
-
-//leetcode submit region begin(Prohibit modification and deletion)
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode() {}
- * TreeNode(int val) { this.val = val; }
- * TreeNode(int val, TreeNode left, TreeNode right) {
- * this.val = val;
- * this.left = left;
- * this.right = right;
- * }
- * }
- */
+//二叉树中的最大路径和
 
 package leetcode.editor.cn;
 
-class Solution {
+class LC0124_BinaryTreeMaximumPathSum {
+    public static void main(String[] args) {
+        Solution solution = new LC0124_BinaryTreeMaximumPathSum().new Solution();
+        // TO TEST
+    }
+
+    //leetcode submit region begin(Prohibit modification and deletion)
+
+    /**
+     * Definition for a binary tree node.
+     * public class TreeNode {
+     * int val;
+     * TreeNode left;
+     * TreeNode right;
+     * TreeNode() {}
+     * TreeNode(int val) { this.val = val; }
+     * TreeNode(int val, TreeNode left, TreeNode right) {
+     * this.val = val;
+     * this.left = left;
+     * this.right = right;
+     * }
+     * }
+     */
     public class TreeNode {
         int val;
         TreeNode left;
@@ -73,17 +79,19 @@ class Solution {
         }
     }
 
-    int ans = 0;
+    class Solution {
+        int ans = 0;
 
-    public int maxPathSum(TreeNode root) {
-        if (root == null) {
-            return 0;
+        public int maxPathSum(TreeNode root) {
+            if (root == null) {
+                return 0;
+            }
+            int left = Math.max(0, maxPathSum(root.left));
+            int right = Math.max(0, maxPathSum(root.right));
+            ans = Math.max(ans, left + right + root.val);
+            return Math.max(left, right) + root.val;
         }
-
-        int left = Math.max(0, maxPathSum(root.left));
-        int right = Math.max(0, maxPathSum(root.right));
-        ans = Math.max(ans, left + right + root.val);
-        return Math.max(left, right) + root.val;
     }
+    //leetcode submit region end(Prohibit modification and deletion)
+
 }
-//leetcode submit region end(Prohibit modification and deletion)
